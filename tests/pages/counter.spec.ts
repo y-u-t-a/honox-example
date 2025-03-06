@@ -8,24 +8,24 @@ test.beforeEach(async ({ page }) => {
 
 test('test Counter page', async ({ page }) => {
   const counterPage = new CounterPage(page)
-  expect(await counterPage.value()).toBe("0")
+  await expect(counterPage.value()).toHaveText("0")
 
   await counterPage.incriment()
-  expect(await counterPage.value()).toBe("1")
+  await expect(counterPage.value()).toHaveText("1")
 
   await counterPage.decriment()
   await counterPage.decriment()
-  expect(await counterPage.value()).toBe("-1")
+  await expect(counterPage.value()).toHaveText("-1")
 
   await counterPage.reset()
-  expect(await counterPage.value()).toBe("0")
+  await expect(counterPage.value()).toHaveText("0")
 });
 
 class CounterPage {
   constructor(private page: Page) {}
 
-  async value() {
-    return this.page.locator("p").innerText()
+  value() {
+    return this.page.locator("p")
   }
   async incriment() {
     return this.page.getByRole("button", { name: "+" }).click()
