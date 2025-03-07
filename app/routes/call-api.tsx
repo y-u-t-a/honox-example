@@ -9,8 +9,8 @@ export default createRoute((c) => {
     <>
       <title>API</title>
       <h1>API</h1>
-      <form>
-        <label for='name'>name</label>
+      <form method='get'>
+        <label for='name'>name: </label>
         <input name='name' />
         <button type='submit'>submit</button>
       </form>
