@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [honox()],
   resolve: {
     alias: [
-      { find: '@/', replacement: `${__dirname}/app/` }
+      { find: '@/', replacement: `${import.meta.dirname}/app/` }
     ]
   }
 })
