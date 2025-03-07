@@ -16,12 +16,4 @@ export default defineConfig({
     baseURL: "http://localhost:5473",
     trace: 'on-first-retry',
   },
-
-  /* Configure projects for major browsers */
-  projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
-  ],
 });
