@@ -1,6 +1,6 @@
 import { createRoute } from 'honox/factory'
 import { Suspense } from 'hono/jsx'
-import CallApi from '@/components/api/$callApi'
+import CallApi from '@/components/call-api/$callApi'
 import { greet, asyncGreet } from '@/server/actions/greet'
 
 export default createRoute((c) => {
