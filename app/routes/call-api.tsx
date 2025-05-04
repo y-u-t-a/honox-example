@@ -2,7 +2,7 @@ import { createRoute } from 'honox/factory'
 import { Suspense } from 'hono/jsx'
 import CallApi from '@/components/call-api/$callApi'
 import ServerComponent from '@/components/call-api/serverComponent'
-import AsyncServerComponent from '@/components/call-api/ssyncServerComponent'
+import AsyncServerComponent from '@/components/call-api/asyncServerComponent'
 
 export default createRoute((c) => {
   const name = c.req.query('name')
